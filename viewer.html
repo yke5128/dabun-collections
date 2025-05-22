@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>駄文表示</title>
+  <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: rgb(233, 218, 240);
+      font-size: 22px;
+      font-family: 'Yomogi', sans-serif;
+      padding: 20px;
+    }
+    #content {
+      white-space: pre-wrap;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="title"></h1>
+  <h3 id="subtitle"></h3>
+  <div id="content"></div>
+  <br>
+  <a href="sentences.html">もどる</a>
+
+  <script>
+    function getQueryParam(name) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(name);
+    }
+
+    const file = getQueryParam('file');
+    if (file) {
+      fetch('TEXT/'+file)
+        .then(response => {
+          if (!response.ok) throw new Error('ファイルが見つかりませんでした。');
+          return response.text();
+        })
+        .then(text => {
+          const lines = text.split('\n');
+          const title = lines.shift().trim();
+
+          // 次の2行目はサブタイトルとして使用（なければ空）
+          const subtitle = lines.length > 0 ? lines.shift().trim() : '';
+
+          // 残りが本文
+          const content = lines.join('\n').trim();
+
+          document.title = title;
+          document.getElementById('title').textContent = title;
+          document.getElementById('subtitle').textContent = subtitle;
+          document.getElementById('content').textContent = content;
+        })
+        .catch(error => {
+          document.getElementById('content').textContent = '読み込みエラー: ' + error.message;
+        });
+    } else {
+      document.getElementById('content').textContent = 'ファイル指定がありません。';
+    }
+  </script>
+</body>
+</html>
