@@ -47,6 +47,7 @@
           document.getElementById('title').textContent = title;
           document.getElementById('subtitle').textContent = subtitle;
           document.getElementById('content').textContent = content;
+          document.getElementById('content').innerHTML = content;
         })
         .catch(error => {
           document.getElementById('content').textContent = '読み込みエラー: ' + error.message;
