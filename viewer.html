@@ -32,7 +32,7 @@
 
     const file = getQueryParam('file');
     if (file) {
-      fetch('TEXT/'+file)
+      fetch('./TEXT/'+file)
         .then(response => {
           if (!response.ok) throw new Error('ファイルが見つかりませんでした。');
           return response.text();
@@ -40,11 +40,7 @@
         .then(text => {
           const lines = text.split('\n');
           const title = lines.shift().trim();
-
-          // 次の2行目はサブタイトルとして使用（なければ空）
           const subtitle = lines.length > 0 ? lines.shift().trim() : '';
-
-          // 残りが本文
           const content = lines.join('\n').trim();
 
           document.title = title;
