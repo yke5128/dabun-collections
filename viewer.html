@@ -9,8 +9,11 @@
 
   <style>
     body {
-      background-color: rgb(240, 224, 236);
-      font-size: 22px;
+      display: flex;
+      margin: 0;
+      justify-content: center;
+      background-color: rgb(255, 238, 251);
+      font-size: 25px;
       font-family: "Kaisei Opti", serif;
       padding: 20px;
     }
@@ -19,20 +22,32 @@
       margin-top: 20px;
       line-height: 2.4;
     }
-
     ruby rt {
-  font-size: 0.6em;
-  color: #333;
-  ruby-position: over;
+      font-size: 0.6em;
+      color: #333;
+      ruby-position: over;
     }
+    .left {
+      text-align: left;
+      max-width: 800px;
+    }
+    .center {
+      text-align: center;
+    }
+    
   </style>
 </head>
 <body>
+  <div class="left">
+  <div>
   <h1 id="title"></h1>
   <h3 id="subtitle"></h3>
   <div id="content"></div>
   <br>
-  <a href="sentences.html">もどる</a>
+  <div class="center">
+  <a href="sentences.html">もどる</a><br><br>
+  </div>
+  </div>
 
   <script>
     function getQueryParam(name) {

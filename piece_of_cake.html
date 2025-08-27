@@ -12,21 +12,33 @@
       scroll-behavior: smooth;
     }
     body {
-      background-color: rgb(240, 224, 236);
+      display: flex;
+      margin: 0;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(255, 238, 251);
       font-size: 25px;
       font-family: "Kaisei Opti", serif;
       line-height: 2;
+    }
+    .center {
+      text-align: center;
+      max-width: 730px;
+    }
+    .left {
+      text-align: left;
     }
   </style>
 </head>
 
 <body>
+  <div class="center">
   <h1>🍰ピース・オブ・警句集</h1>
   <ul>
     お気に入りのフレーズ、きっと見つかる。かもしれないし見つからないかもしれない。
 
-  </br></br>
-
+  <br><br>
+    <div class="left">
 <li><ruby>羌<rt>ああ</rt></ruby>！至極ハッピかりき！
 <li>I am the unkœst boy in the world
 <li>I can't forgo a monthly trip to Saizeriya!!!
@@ -265,10 +277,12 @@
 <li>話柄の虧欠をいかんせん？
 <li>ワンチャンにワンチャンかけて
 <li>ヲンツー・ヅーは、山ほんど。
+    </div>
 
   </ul>
   <br>
-  <a href="#">ページ最上部へ</a></br>
-  <a href="index.html">もどる</a>
+  <a href="#">ページ最上部へ</a><br>
+  <a href="index.html">もどる</a><br><br>
+  </div>
 </body>
 </html>
