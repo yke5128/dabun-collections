@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>駄文表示</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kaisei+Opti&family=Shippori+Mincho&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      display: flex;
+      margin: 0;
+      justify-content: center;
+      background-color: rgb(255, 238, 251);
+      font-size: 25px;
+      font-family: "Kaisei Opti", serif;
+      padding: 20px;
+    }
+    #content {
+      white-space: pre-wrap;
+      margin-top: 20px;
+    }
+    ruby rt {
+      font-size: 0.6em;
+      color: #333;
+      ruby-position: over;
+    }
+    .left {
+      text-align: left;
+      max-width: 800px;
+    }
+    .center {
+      text-align: center;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="left">
+  <div>
+  <h1 id="title"></h1>
+  <h3 id="subtitle"></h3>
+  <div id="content"></div>
+  <br>
+  <div class="center">
+  <a href="kanjironko.html">もどる</a><br><br>
+  </div>
+  </div>
+
+  <script>
+    function getQueryParam(name) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(name);
+    }
+
+    const file = getQueryParam('file');
+    if (file) {
+      fetch('./TEXT/'+file)
+        .then(response => {
+          if (!response.ok) throw new Error('ファイルが見つかりませんでした。');
+          return response.text();
+        })
+        .then(text => {
+          const lines = text.split('\n');
+          const title = lines.shift().trim();
+          const subtitle = lines.length > 0 ? lines.shift().trim() : '';
+          const content = lines.join('\n').trim();
+
+          document.title = title;
+          document.getElementById('title').textContent = title;
+          document.getElementById('subtitle').textContent = subtitle;
+          document.getElementById('content').textContent = content;
+          document.getElementById('content').innerHTML = content;
+        })
+        .catch(error => {
+          document.getElementById('content').textContent = '読み込みエラー: ' + error.message;
+        });
+    } else {
+      document.getElementById('content').textContent = 'ファイル指定がありません。';
+    }
+  </script>
+</body>
+</html>
