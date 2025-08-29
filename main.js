@@ -1,1 +1,0 @@
-while (prompt("input") !== "kona") {}

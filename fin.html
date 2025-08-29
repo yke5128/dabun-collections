@@ -4,20 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>駄文置き場</title>
+  <title>スペシャル</title>
   <link href="https://fonts.googleapis.com/css2?family=Kaisei+Opti&family=Shippori+Mincho&display=swap" rel="stylesheet">
 
   <style>
     body {
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        height: 100%;
-      background-color: rgb(255, 238, 251);
-      font-size: 25px;
-      font-family: "Kaisei Opti", serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    background-color: rgb(255, 238, 251);
+    font-size: 25px;
+    font-family: "Kaisei Opti", serif;
     }
-    .test {
+    .area {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -41,10 +41,20 @@
 
 <body>
  <script src="/main.js"></script> 
- <p class="test"></p>
- <p class="start-button">スタート</p>
+ <p class="area"></p>
+<button class="start-button" onClick="handleClick()">
+<span style="font-size: 30px;">はじめる</span></button>
+<div id="objA" style="display: none;">オブジェクトA</div>
+<div id="objB">オブジェクトB</div>
 
-</ul>
   <a href="index.html">もどる</a>
+<script>
+ function handleClick() {
+    document.getElementById('objA').style.display = '';
+    document.getElementById('objB').style.display = 'none';
+ }
+</script>
+
+
 </body>
 </html>
