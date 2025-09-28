@@ -16,7 +16,19 @@ Dishまで全部食べたらば、ハイ-ish、-ishで踊りましょ！
 咽喉ばかりはインコなもんで、mockすんのに持ってこいじゃん！
 
 そんなあなたに吸塵広告：
-誰でも出来る単純作業、アットホームな職場です♪
+
+<div style="display: inline-block;
+      background: #fff;
+      text-align: center;
+      padding: 2em 1.2em;
+      border-radius: 8px;
+      box-shadow: 2px 4px 12px rgba(0,0,0,0.13);
+      font-weight: bold;
+      border: 1px solid #fff;">「　　　　　　　　　　　　
+<span style="text-decoration: underline; text-decoration-color: pink; text-decoration-thickness: 7px;">誰でも出来る単純作業、
+アットホームな職場です</span>♪
+　　　　　　　　　　　　」
+</div>
 
 ​──お手本通りのこと以外は、何を<ruby>作<rt>や</rt></ruby>っても認めないよ？
 右から左へベルコン労働。
