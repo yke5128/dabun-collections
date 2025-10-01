@@ -22,12 +22,51 @@
       line-height: 2;
       padding: 20px;
     }
+    @media (max-width: 600px) {
+      body {
+        font-size: 18px;
+      }
+    }
     .center {
       text-align: center;
       max-width: 730px;
     }
     .left {
       text-align: left;
+    }
+    .fixed-btn {
+      position: fixed;
+      bottom: 20px;
+      width: 60px;
+      height: 60px;
+      background-color: rgba(0, 0, 0, 0.4);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      font-size: 24px;
+      cursor: pointer;
+      z-index: 999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: blur(5px);
+      transition: background-color 0.3s;
+    }
+
+    .fixed-btn:hover {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .scroll-top-btn {
+      right: 20px;
+    }
+
+    .back-btn {
+      right: 90px;
+    }
+
+    .scroll-top-btn:hover {
+      background-color: rgba(0, 0, 0, 0.6);
     }
   </style>
 </head>
@@ -40,221 +79,224 @@
 <ul>
   <br>
     <div class="left">
-  <li><ruby>羌<rt>ああ</rt></ruby>！至極ハッピかりき！
-  <li>I am the unkœst boy in the world
-  <li>I can't forgo a monthly trip to Saizeriya!!!
-  <li>I guess it is yep 也
-  <li>愛し愛され人生航路
-  <li>隘路に消えるアイロニー 
-  <li>あうぇー希望を抱いてたんだけど。間もなくその希望は砕け散ったようです。
-  <li>青息吐息のアオハルでした
-  <li>頭がおかしかりき！私！私！
+  <li><ruby>羌<rt>ああ</rt></ruby>！至極ハッピかりき！</li>
+  <li>I am the unkœst boy in the world</li>
+  <li>I can't forgo a monthly trip to Saizeriya!!!</li>
+  <li>I guess it is yep 也</li>
+  <li>愛し愛され人生航路</li>
+  <li>隘路に消えるアイロニー </li>
+  <li>あうぇー希望を抱いてたんだけど。間もなくその希望は砕け散ったようです。</li>
+  <li>青息吐息のアオハルでした</li>
+  <li>頭がおかしかりき！私！私！</li>
   <li><ruby>遖<rt>あっぱれ</rt></ruby>パレード執り行っちゃいたい！</li>
-  <li>アネクドオトはいづくにか？
-  <li>アフォげてもぉてぅね！
-  <li>アフォには響かんアフォリズム 
-  <li>⚠︎︎Appreciateが未受領です⚠︎︎
-  <li>Aho Knew World
-  <li>¡ <a href="https://kotobank.jp/esjaword/ajo">ajo</a>みたいな人生 !
+  <li>アネクドオトはいづくにか？</li>
+  <li>アフォげてもぉてぅね！</li>
+  <li>アフォには響かんアフォリズム </li>
+  <li>⚠︎︎Appreciateが未受領です⚠︎︎</li>
+  <li>Aho Knew World</li>
+  <li>¡ <a href="https://kotobank.jp/esjaword/ajo">ajo</a>みたいな人生 !</li>
   <li>甘い慫慂には、のっかるべきじゃないわよん</li>
-  <li>アリエノール・抱きてーヌ
-  <li>あれとかこれとかそれとかどれとか、生きるって蕪雑で<ruby>神遠<rt>しんど</rt></ruby>いね！
-  <li><a href="https://yoji.jitenon.jp/yojid/1561"><ruby>阿轆轆地<rt>あろくろくじ</rt></ruby></a>といかない人生でっけど、<a href="https://yoji.jitenon.jp/yojii/4235"><ruby>活潑潑地<rt>かっぱつはっち</rt></ruby></a>で生きてきたいかもね！
-  <li>UnderstandもUnderstoodも叶わぬ人世
-  <li>Underrated Zeal And Industry 略してUZAI
-  <li>安泰な将来への<a href="https://www.kanjipedia.jp/kotoba/0004079800"><ruby>筌蹄<rt>せんてい</rt></ruby></a>は要りません。
+  <li>アリエノール・抱きてーヌ</li>
+  <li>あれとかこれとかそれとかどれとか、生きるって蕪雑で<ruby>神遠<rt>しんど</rt></ruby>いね！</li>
+  <li><a href="https://yoji.jitenon.jp/yojid/1561"><ruby>阿轆轆地<rt>あろくろくじ</rt></ruby></a>といかない人生でっけど、<a href="https://yoji.jitenon.jp/yojii/4235"><ruby>活潑潑地<rt>かっぱつはっち</rt></ruby></a>で生きてきたいかもね！</li>
+  <li>UnderstandもUnderstoodも叶わぬ人世</li>
+  <li>Underrated Zeal And Industry 略してUZAI</li>
+  <li>安泰な将来への<a href="https://www.kanjipedia.jp/kotoba/0004079800"><ruby>筌蹄<rt>せんてい</rt></ruby></a>は要りません。</li>
   <li>いゝさ、烙印、捺してみろ！</li>
   <li>イェップ＝ン＝ノオプが妥当かね！</li>
-  <li>意外以外言いがたいかいGuy？
-  <li><ruby>怎<rt>いか</rt></ruby>でか汝、往なざるや？
-  <li>イカれてもぉてぅね！
-  <li>意識とワイヤレス通信してもうてるからBluetoothだね！
-  <li>弄って・維持らにゃ・なんなくなっちゃったぁ～⤴︎
-  <li><a href="https://www.kanjipedia.jp/kotoba/0000181800"><ruby>頤使<rt>いし</rt></ruby></a>られ<ruby>韋脂<rt>いし</rt></ruby>るとか、<ruby>意思<rt>いし</rt></ruby>ざこすぎw<br>Yet, <a href="https://www.kanjipedia.jp/kotoba/0000187600"><ruby>懿旨<rt>いし</rt></ruby></a>に<ruby>違旨<rt>いし</rt></ruby>るのはむりぽだね！うん、ばしょを<ruby>移徙<rt>いし</rt></ruby>して<a href="https://kotobank.jp/frjaword/ici"><ruby>Ici<rt>イスィ</rt></ruby></a>で<ruby>縊死<rt>いし</rt></ruby>😇
+  <li>意外以外言いがたいかいGuy？</li>
+  <li><ruby>怎<rt>いか</rt></ruby>でか汝、往なざるや？</li>
+  <li>イカれてもぉてぅね！</li>
+  <li>意識とワイヤレス通信してもうてるからBluetoothだね！</li>
+  <li>弄って・維持らにゃ・なんなくなっちゃったぁ～⤴︎</li>
+  <li><a href="https://www.kanjipedia.jp/kotoba/0000181800"><ruby>頤使<rt>いし</rt></ruby></a>られ<ruby>韋脂<rt>いし</rt></ruby>るとか、<ruby>意思<rt>いし</rt></ruby>ざこすぎw<br>Yet, <a href="https://www.kanjipedia.jp/kotoba/0000187600"><ruby>懿旨<rt>いし</rt></ruby></a>に<ruby>違旨<rt>いし</rt></ruby>るのはむりぽだね！うん、ばしょを<ruby>移徙<rt>いし</rt></ruby>して<a href="https://kotobank.jp/frjaword/ici"><ruby>Ici<rt>イスィ</rt></ruby></a>で<ruby>縊死<rt>いし</rt></ruby>😇</li>
   <li>一から十まで気息奄々！</li>
-  <li>一から十までコンクェスト！的衝動翳して、震はせろ！！！！ 
-  <li>一見重厚で冷厳そうな壁でも、<ruby>靠<rt>もた</rt></ruby>れてみれば殊の外、快適！なこともあるぞかし。
-  <li>往ね。
-  <li>イミディエットに、決裂だあ！
-  <li>イモネライェンくてかなすぃね！
-  <li>因襲打破って参りまそ。
-  <li>Weirdなまでに身体がWeary
-  <li>Vulgarバーガーおひとついかが？🍔
-  <li>ヴォミっとvomitしとけかし！
-  <li>雨季でもウキウキとか狂気だね！
+  <li>一から十までコンクェスト！的衝動翳して、震はせろ！！！！</li>
+  <li>一見重厚で冷厳そうな壁でも、<ruby>靠<rt>もた</rt></ruby>れてみれば殊の外、快適！なこともあるぞかし。</li>
+  <li>往ね。</li>
+  <li>イミディエットに、決裂だあ！</li>
+  <li>イモネライェンくてかなすぃね！</li>
+  <li>因襲打破って参りまそ。</li>
+  <li>Weirdなまでに身体がWeary</li>
+  <li>Vulgarバーガーおひとついかが？🍔</li>
+  <li>ヴォミっとvomitしとけかし！</li>
+  <li>雨季でもウキウキとか狂気だね！</li>
   <li>OOPS アフタヌウンの白河夜船！</li>
-  <li>ウヮォ凄
-  <li>雲泥万里に思えるぐらいの差があるね！
-  <li>エアプ酢豆腐
-  <li>EXCEEDINGLY EXHAUSTED
+  <li>ウヮォ凄</li>
+  <li>雲泥万里に思えるぐらいの差があるね！</li>
+  <li>エアプ酢豆腐</li>
+  <li>EXCEEDINGLY EXHAUSTED</li>
   <li>得手に帆を揚げ生きちゃえかし</li>
-  <li>エネルギーインパクト丼
-  <li>Everything's<a href="https://yoji.jitenon.jp/yojil/5505">羞渋疑沮</a>ってるぅ～⤴︎
+  <li>エネルギーインパクト丼</li>
+  <li>Everything's<a href="https://yoji.jitenon.jp/yojil/5505">羞渋疑沮</a>ってるぅ～⤴︎</li>
   <li>エンテュージアズムを欠いてんのっ！</li>
-  <li>Envyパイプで殴っておくれ。
-  <li>逐いつ逐われつチキンレエス、ゆうんが世の中と違ゃいまっか！
-  <li>桜花を謳歌しちゃおうか！
-  <li>驕ってちゃ黄金時代は現出できないね⤴︎！
-  <li>おちおちうんこもできねえ文明社会は窮屈だ
-  <li><ruby>臽<rt>おとしあな</rt></ruby>に落っこちぬ。
-  <li>乙女心も秘密鍵で復号できたらいいのにな。
-  <li>思い出ナッシング、ナッシング
-  <li>俺の未来もCADれりゃいいのに
-  <li>俺は𝒁𝑨𝑲𝑶だ
-  <li>お濾過すぎて亡いちゃうね
-  <li>温和な僕から、贈る鉄拳！君の隆準にクリインヒットだ！
-  <li>繪畫のハウツウ、敎えて吳んろ！
-  <li>晦渋なる言辞を廃せよ、瞭然たる言辞を讃せよ。
-  <li>カキュスミで<ruby>㠯󠄂<rt>もっ</rt></ruby>て、往んど呉レ♡
+  <li>Envyパイプで殴っておくれ。</li>
+  <li>逐いつ逐われつチキンレエス、ゆうんが世の中と違ゃいまっか！</li>
+  <li>桜花を謳歌しちゃおうか！</li>
+  <li>驕ってちゃ黄金時代は現出できないね⤴︎！</li>
+  <li>おちおちうんこもできねえ文明社会は窮屈だ</li>
+  <li><ruby>臽<rt>おとしあな</rt></ruby>に落っこちぬ。</li>
+  <li>乙女心も秘密鍵で復号できたらいいのにな。</li>
+  <li>思い出ナッシング、ナッシング</li>
+  <li>俺の未来もCADれりゃいいのに</li>
+  <li>俺は𝒁𝑨𝑲𝑶だ</li>
+  <li>お濾過すぎて亡いちゃうね</li>
+  <li>温和な僕から、贈る鉄拳！君の隆準にクリインヒットだ！</li>
+  <li>繪畫のハウツウ、敎えて吳んろ！</li>
+  <li>晦渋なる言辞を廃せよ、瞭然たる言辞を讃せよ。</li>
+  <li>カキュスミで<ruby>㠯󠄂<rt>もっ</rt></ruby>て、往んど呉レ♡</li>
   <li>斯くなる艱難辛苦に相対峙せしかば余甚だ困却し候🥺
-  <li>過現未の私にメルシー！
-  <li>過去のレガシーにコシューシコ！
+  <li>過現未の私にメルシー！</li>
+  <li>過去のレガシーにコシューシコ！</li>
   <li><ruby>釦<rt>かざ</rt></ruby>ってゐれば？矯飾ボオイ。</li>
   <li>鎹思案でマルチタスク</li>
-  <li>豁然大悟っちゃいました！
-  <li>彼らと僕とじゃ、ヴェクトルが異なる丈です！
-  <li>可愛さ至上で行きませう！
-  <li>鰥寡孤独で轗軻不遇、こいつぁ看過できないね！
+  <li>豁然大悟っちゃいました！</li>
+  <li>彼らと僕とじゃ、ヴェクトルが異なる丈です！</li>
+  <li>可愛さ至上で行きませう！</li>
+  <li>鰥寡孤独で轗軻不遇、こいつぁ看過できないね！</li>
   <li>緩急烈しいデステニー</li>
   <li>規範に反旗を翻せ！</li>
-  <li>ギャースなり！甚だギャースなり！
-  <li>逆に問うけどお前が何？ 
-  <li>QOLが、雑っ魚雑魚～☆
-  <li>急・蕁・蕁！
-  <li>僥倖じみたオポチュニティに際会！
-  <li>魚網鴻離のセレンディピティ
-  <li>襟度が広くてkindね！
-  <li>Quit Questioning Quite Quickly!
-  <li>苦汁、過剰摂取の暗黒時代
-  <li>クリシェにあらざるアフォリズムをくれ！
-  <li>グレェトなアイヂアだたあ思わないかい？ん？
+  <li>ギャースなり！甚だギャースなり！</li>
+  <li>逆に問うけどお前が何？</li>
+  <li>QOLが、雑っ魚雑魚～☆</li>
+  <li>急・蕁・蕁！</li>
+  <li>僥倖じみたオポチュニティに際会！</li>
+  <li>魚網鴻離のセレンディピティ</li>
+  <li>襟度が広くてkindね！</li>
+  <li>Quit Questioning Quite Quickly!</li>
+  <li>苦汁、過剰摂取の暗黒時代</li>
+  <li>クリシェにあらざるアフォリズムをくれ！</li>
+  <li>グレェトなアイヂアだたあ思わないかい？ん？</li>
   <li>径庭、弥が上にもExpandで底止してくんないよ！
-  <li>激情でも湧き上げとけ
-  <li>蓋しそう！蓋しそう！
-  <li>儼存するのをやめましょう
-  <li>けんもほろろに放浪航路
-  <li><a href="https://www.kanjipedia.jp/kotoba/0007465400"><ruby>愆戻<rt>けんれい</rt></ruby></a>、<ruby>努力努力<rt>ゆめゆめ</rt></ruby>犯さんといて！
-  <li>こういう無駄な時間を省きたい
-  <li>浩瀚な書物を瀏覧したいね！
-  <li>越えるべきは昨日のわたし！
-  <li>こっち<ruby>Quittez<rt>キテ</rt></ruby> !
-  <li>この世は我が<ruby>掌<rt>て</rt></ruby>に明け渡された！
+  <li>激情でも湧き上げとけ</li>
+  <li>蓋しそう！蓋しそう！</li>
+  <li>儼存するのをやめましょう</li>
+  <li>けんもほろろに放浪航路</li>
+  <li><a href="https://www.kanjipedia.jp/kotoba/0007465400"><ruby>愆戻<rt>けんれい</rt></ruby></a>、<ruby>努力努力<rt>ゆめゆめ</rt></ruby>犯さんといて！</li>
+  <li>こういう無駄な時間を省きたい</li>
+  <li>浩瀚な書物を瀏覧したいね！</li>
+  <li>越えるべきは昨日のわたし！</li>
+  <li>こっち<ruby>Quittez<rt>キテ</rt></ruby> !</li>
+  <li>この世は我が<ruby>掌<rt>て</rt></ruby>に明け渡された！</li>
   <li>こんな昧爽に、なんの戯言を。</li>
-  <li>サガったときは詩作に限る
-  <li>さくたったったと探しにいくよ～、虚空にたゆたう心のよすがを。
-  <li>𝒁𝑨𝑲𝑶くてコンティニュー
-  <li>雑喉は雑喉らしく、<ruby>跑<rt>あが</rt></ruby>きんしゃい。
-  <li>詐誕のサタンの左袒を借りて、苦心惨憺、さあ誕生！
-  <li>蹉跌しちゃった青年期
-  <li>SuddenlyなSaddenですから怨みがinto 骨髄ね！
-  <li>The bigger, the better
-  <li>避らぬ苦難もあるぞかし。されどできれば、避らまほし。
-  <li>倖せを僖んでまいりまそ。
-  <li>私曲の限りを尽くしてもうてぅね！
+  <li>サガったときは詩作に限る</li>
+  <li>さくたったったと探しにいくよ～、虚空にたゆたう心のよすがを。</li>
+  <li>𝒁𝑨𝑲𝑶くてコンティニュー</li>
+  <li>雑喉は雑喉らしく、<ruby>跑<rt>あが</rt></ruby>きんしゃい。</li>
+  <li>詐誕のサタンの左袒を借りて、苦心惨憺、さあ誕生！</li>
+  <li>蹉跌しちゃった青年期</li>
+  <li>SuddenlyなSaddenですから怨みがinto 骨髄ね！</li>
+  <li>The bigger, the better</li>
+  <li>避らぬ苦難もあるぞかし。されどできれば、避らまほし。</li>
+  <li>倖せを僖んでまいりまそ。</li>
+  <li>私曲の限りを尽くしてもうてぅね！</li>
   <li>至高の詩窖を志向しよう</li>
-  <li>至上の詩情を誌上に載せたくとも、市場は私情を許さない。
+  <li>至上の詩情を誌上に載せたくとも、市場は私情を許さない。</li>
   <li>シチューにカツを求む</li>
-  <li>桎梏だらけの漆黒days
-  <li>しっぽりしんねこしたいよね！
-  <li>シニカルな死にかけ
+  <li>桎梏だらけの漆黒days</li>
+  <li>しっぽりしんねこしたいよね！</li>
+  <li>シニカルな死にかけ</li>
   <li>雌伏していた革命児</li>
-  <li>シャーデンフロイデに頰緩ませとけ
-  <li>シャーデンフロイデの種ひと粒あげる
-  <li>しゃかりきシャワりき
-  <li>シャクっと逝くのが癪なもんでさ
+  <li>シャーデンフロイデに頰緩ませとけ</li>
+  <li>シャーデンフロイデの種ひと粒あげる</li>
+  <li>しゃかりきシャワりき</li>
+  <li>シャクっと逝くのが癪なもんでさ</li>
   <li>車校じゃなくてshackleじゃねえか</li>
-  <li>show off 不肖で参りまそ！
-  <li>常時血の味
-  <li>人生畢だるメンドス拘拉
-  <li>シンディメーテ
-  <li>人品骨柄オワコンでっから詮無いね！
-  <li>瑞祥ちょうもン、顕れて呉んろ！
-  <li>Super Happy Isolated Time 略してSHIT
-  <li>すこぶるスチンキーなる屁をばひとこき
-  <li>頭上に架かるArco iris、コリャ僥倖だったらありゃせんね！¡Suertero!な人生だったら望外だってばよ！さぁ、ひねもすFelizって参りまそ！
-  <li>すゝむかのくか、向背決せよ！
+  <li>show off 不肖で参りまそ！</li>
+  <li>常時血の味</li>
+  <li>人生畢だるメンドス拘拉</li>
+  <li>シンディメーテ</li>
+  <li>人品骨柄オワコンでっから詮無いね！</li>
+  <li>瑞祥ちょうもン、顕れて呉んろ！</li>
+  <li>Super Happy Isolated Time 略してSHIT</li>
+  <li>すこぶるスチンキーなる屁をばひとこき</li>
+  <li>頭上に架かるArco iris、コリャ僥倖だったらありゃせんね！¡Suertero!な人生だったら望外だってばよ！さぁ、ひねもすFelizって参りまそ！</li>
+  <li>すゝむかのくか、向背決せよ！</li>
   <li>すたこらさっさと逐電だぁ！</li>
-  <li>Still 起きてる
+  <li>Still 起きてる</li>
   <li>ストマッケークが苛烈だね！</li>
   <li>ストレッサアは駆逐せよかし！</li>
-  <li>青春：愛を含む俺の心
-  <li>脆性破壊ではららカス☆彡
-  <li>脆美ったら脆美で素的よね！
+  <li>青春：愛を含む俺の心</li>
+  <li>脆性破壊ではららカス☆彡</li>
+  <li>脆美ったら脆美で素的よね！</li>
   <li>拙劣な溌剌</li>
-  <li>漸進、前進 𝕃𝕖𝕥'𝕤 𝕘𝕠
-  <li>センスが無いから詮無いね！
-  <li>センスなんてないです、あるのはセンサーです。
-  <li>浅慮野郎に遠慮なんか要んないね！
+  <li>漸進、前進 𝕃𝕖𝕥'𝕤 𝕘𝕠</li>
+  <li>センスが無いから詮無いね！</li>
+  <li>センスなんてないです、あるのはセンサーです。</li>
+  <li>浅慮野郎に遠慮なんか要んないね！</li>
   <li>総体、芸術家はエピゴーネンである。</li>
-  <li>俗悪コンテンツ風情に海馬を起動させたかないね！
+  <li>俗悪コンテンツ風情に海馬を起動させたかないね！</li>
   <li>措定ソテーを召し上がれ</li>
-  <li>そもそも論的思考で悪いね！
-  <li>Solidな矜持は融かせませんからSolitudeるのがSolution
-  <li>太陽にだって黒点があるんだからね。prominenceの如くあれ。
-  <li>多義る思いをこねくり回そ！
+  <li>そもそも論的思考で悪いね！</li>
+  <li>Solidな矜持は融かせませんからSolitudeるのがSolution</li>
+  <li>太陽にだって黒点があるんだからね。prominenceの如くあれ。</li>
+  <li>多義る思いをこねくり回そ！</li>
   <li>他者からどう思われるかということに私は拘泥しない</li>
-  <li>駄洒落降って面白い何時もの事です氣にするな。
-  <li>ダス・マンに堕すマン
-  <li>ダブルクォーテーションばっかの借り物人生。
-  <li>袂⊥鋏でバシッとね
-  <li>斷片、斷片、斷片が、僕を<ruby>形成<rt>つく</rt></ruby>ってゐるんだね。
-  <li>逐電したけりゃ、早急にね。
-  <li>朕恋い枯れぬ
-  <li>ちんちんかもかも致せませんから詮無いね！
-  <li>ヅーマイベストらなくっちゃね！
-  <li>辛い思いだけして生きていく
-  <li>手汗で無反FUUUUUUUUUU
-  <li>底止するとこ知んないね！
-  <li>出来栄え出色はなまるね！
-  <li><a href="https://kotobank.jp/word/%E8%BF%AD%E6%92%83-2850232">迭撃</a>せんとい<ruby>弖<rt>て</rt></ruby>～！
+  <li>駄洒落降って面白い何時もの事です氣にするな。</li>
+  <li>ダス・マンに堕すマン</li>
+  <li>ダブルクォーテーションばっかの借り物人生。</li>
+  <li>袂⊥鋏でバシッとね</li>
+  <li>斷片、斷片、斷片が、僕を<ruby>形成<rt>つく</rt></ruby>ってゐるんだね。</li>
+  <li>逐電したけりゃ、早急にね。</li>
+  <li>朕恋い枯れぬ</li>
+  <li>ちんちんかもかも致せませんから詮無いね！</li>
+  <li>ヅーマイベストらなくっちゃね！</li>
+  <li>辛い思いだけして生きていく</li>
+  <li>手汗で無反FUUUUUUUUUU</li>
+  <li>底止するとこ知んないね！</li>
+  <li>出来栄え出色はなまるね！</li>
+  <li><a href="https://kotobank.jp/word/%E8%BF%AD%E6%92%83-2850232">迭撃</a>せんとい<ruby>弖<rt>て</rt></ruby>～！</li>
   <li>鉄壁防御の潔癖ボーイ</li>
-  <li>天性の情弱
-  <li>テンソン<ruby>黜陟<rt>あげさげ</rt></ruby>烈しすぎ～！
-  <li>沺々でんぐり返って意趣返シィ
-  <li>Temporaryな先延ばしは、サクサク感の失われたTempuraなりや？
-  <li>どうせ世界は排反事象
-  <li>独善的な深遠味、いつまで塗していくんだい？
-  <li>とっ散らかったスケジューラビリティ、早晩おじゃんで蹉跌なん生じける！ってな話に帰するが凡常でっからァ～！
-  <li>Tomatoやめろ
+  <li>天性の情弱</li>
+  <li>テンソン<ruby>黜陟<rt>あげさげ</rt></ruby>烈しすぎ～！</li>
+  <li>沺々でんぐり返って意趣返シィ</li>
+  <li>Temporaryな先延ばしは、サクサク感の失われたTempuraなりや？</li>
+  <li>どうせ世界は排反事象</li>
+  <li>独善的な深遠味、いつまで塗していくんだい？</li>
+  <li>とっ散らかったスケジューラビリティ、早晩おじゃんで蹉跌なん生じける！ってな話に帰するが凡常でっからァ～！</li>
+  <li>Tomatoやめろ</li>
   <li>DRYな君と、一夜限りのプラグアンドプレイを。</li>
-  <li>ドンモーアしば香
-  <li>投げ打っちまいたい被投性
-  <li>な<ruby>麤略<rt>そりゃく</rt></ruby>に甘んじそ！
-  <li>何も指向しない、僕はスカラー。
+  <li>ドンモーアしば香</li>
+  <li>投げ打っちまいたい被投性</li>
+  <li>な<ruby>麤略<rt>そりゃく</rt></ruby>に甘んじそ！</li>
+  <li>何も指向しない、僕はスカラー。</li>
   <li>なまじっかボーイの去就は未定</li>
-  <li>なまなかな愛はかっこ悪いもん。
-  <li>Numbってまうから冬はDumb
+  <li>なまなかな愛はかっこ悪いもん。</li>
+  <li>Numbってまうから冬はDumb</li>
   <li>鳴りを潜めた夾雑物</li>
-  <li>なんにも望んじゃおけないね。
-  <li>ナンヤソレってな話ィ⤴︎︎︎
-  <li>ねてーた
-  <li>寝らえん
-  <li>背理した幻想、乖離した現実。
-  <li>馬鹿莫迦お破家なのォ
-  <li>掃き溜めに捨てた凡サンス
-  <li><a href="https://yoji.jitenon.jp/yojig/3372">幕天席地</a>で参りましょ！
-  <li>恥ちょう感覚は擲っちまえ！
-  <li>発光できない薄幸days
-  <li>ハッピーになんてなれやしないしー、毎日徹底☆死にたがり～！
-  <li>甚だおかしかりき！あの頃！あの頃！
-  <li>甚だ面白いわねえ
-  <li>パラダイス帝国万歳！
-  <li>パラドキスィカルで魯鈍だね！
-  <li>聖林雑喉師匠
-  <li>ﾊﾟﾝｯ 惹きにくです！！
+  <li>なんにも望んじゃおけないね。</li>
+  <li>ナンヤソレってな話ィ⤴︎︎︎</li>
+  <li>熱意ばかり空回りする俺も軽薄な言葉しか吐けない俺も嫌いだ</li>
+  <li>ネツリキじみてる青春だっとか、デンジキめいてる半生だっとか、おほけねぇifルートは転生後に配達日指定して誂えときまひょか！</li>
+  <li>ねてーた</li>
+  <li>寝らえん</li>
+  <li>背理した幻想、乖離した現実。</li>
+  <li>馬鹿莫迦お破家なのォ</li>
+  <li>掃き溜めに捨てた凡サンス</li>
+  <li><a href="https://yoji.jitenon.jp/yojig/3372">幕天席地</a>で参りましょ！</li>
+  <li>恥ちょう感覚は擲っちまえ！</li>
+  <li>発光できない薄幸days</li>
+  <li>ハッピーになんてなれやしないしー、毎日徹底☆死にたがり～！</li>
+  <li>甚だおかしかりき！あの頃！あの頃！</li>
+  <li>甚だ面白いわねえ</li>
+  <li>パラダイス帝国万歳！</li>
+  <li>パラドキスィカルで魯鈍だね！</li>
+  <li>聖林雑喉師匠</li>
+  <li>ﾊﾟﾝｯ 惹きにくです！！</li>
   <li>Be an originative CSSer.</li>
-  <li>B級ユーモアはいかゞ？頬張ってごらん、まずいから。
-  <li>膝毛をポリってる！
-  <li>ビジィは美事ー
+  <li>B級ユーモアはいかゞ？頬張ってごらん、まずいから。</li>
+  <li>膝毛をポリってる！</li>
+  <li>ビジィは美事ー</li>
   <li>拉げた人生観と侘しさとの間に揺蕩える私なりや？</li>
-  <li>ビタミンB₂を呉れ！
-  <li>畢竟 i dunno なりﾊｯﾊｰ↑
-  <li>畢竟しゃばいんよ！
-  <li>畢竟眠いんよ！Get outta here, 眠気！いかでか汝、往なざるや？可及的速やかに往にさらせ！うん、要んないから往んどくれ♡
-  <li>ひねもす<a href="https://greeknote.net/dictionary-eftychismenos-happy/#:~:text=%CE%B5%CF%85%CF%84%CF%85%CF%87%CE%B9%CF%83%CE%BC%CE%AD%CE%BD%CE%BF%CF%82%EF%BC%88%E3%82%A8%E3%83%95%E3%83%86%E3%82%A3%E3%83%92%E3%82%BA%E3%83%A1%E3%83%BC%E3%83%8E%E3%82%B9,%E3%81%A8%E3%81%84%E3%81%86%E6%84%8F%E5%91%B3%E3%81%AE%E5%BD%A2%E5%AE%B9%E8%A9%9E%E3%81%A7%E3%81%99%E3%80%82"><span style="font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">ευτυχισμένος</span></a>→yet、よもすがら<a href="https://kotobank.jp/frjaword/malheureux">malheureux</a>、<a href="https://kotobank.jp/esjaword/y">y</a>、<a href="https://kotobank.jp/itjaword/infelice">infelice</a>と来ちゃ総体MyLife = falseでっからね！
-  <li>微レ存もしないレーゾンデートル
+  <li>ビタミンB₂を呉れ！</li>
+  <li>畢竟 i dunno なりﾊｯﾊｰ↑</li>
+  <li>畢竟しゃばいんよ！</li>
+  <li>畢竟眠いんよ！Get outta here, 眠気！いかでか汝、往なざるや？可及的速やかに往にさらせ！うん、要んないから往んどくれ♡</li>
+  <li>ひねもす<a href="https://greeknote.net/dictionary-eftychismenos-happy/#:~:text=%CE%B5%CF%85%CF%84%CF%85%CF%87%CE%B9%CF%83%CE%BC%CE%AD%CE%BD%CE%BF%CF%82%EF%BC%88%E3%82%A8%E3%83%95%E3%83%86%E3%82%A3%E3%83%92%E3%82%BA%E3%83%A1%E3%83%BC%E3%83%8E%E3%82%B9,%E3%81%A8%E3%81%84%E3%81%86%E6%84%8F%E5%91%B3%E3%81%AE%E5%BD%A2%E5%AE%B9%E8%A9%9E%E3%81%A7%E3%81%99%E3%80%82"><span style="font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">ευτυχισμένος</span></a>→yet、よもすがら<a href="https://kotobank.jp/frjaword/malheureux">malheureux</a>、<a href="https://kotobank.jp/esjaword/y">y</a>、<a href="https://kotobank.jp/itjaword/infelice">infelice</a>と来ちゃ総体MyLife = falseでっからね！</li>
+  <li>微レ存もしないレーゾンデートル</li>
   <li>ファンタスチックな生き方許りを進取れちゃったら幸甚ね！</li>
   <li>フォオマアだっともラタアだっとも、ヂタミンし難い所だね！</li>
+  <li>不確定性のifを求めてこの<ruby>次元<rt>せかい</rt></ruby>を彷徨いますか？</li>
   <li>膨れ上がった希望は、VulnerableなBalloonなりや？</li>
   <li>不撓不屈の不適合者</li>
   <li>冬の<ruby>祁寒<rt>きかん</rt></ruby>なぞ糠に釘！</li>
@@ -296,6 +338,7 @@
   <li>解らないね。わたくしの、唯一性の、持てる意味。</li>
   <li>判らんままにりんじゅっちまってオ了イね！ちゃらちゃ！</li>
   <li>脇道に逸れ太郎</li>
+  <li>態々進んで粒々辛苦？勝手に呼び寄せさらした艱難。</li>
   <li>ワタシ生きてるの價值無いアルネ</li>
   <li>私にとっちゃ、私が規矩準縄！</li>
   <li>私の心は、黑く、黑く、蝕まれてゐるのです。</li>
@@ -307,8 +350,18 @@
 
   </ul>
   <br>
+  <button class="fixed-btn back-btn" onclick="history.back()">←</button>
+  <button class="fixed-btn scroll-top-btn" onclick="scrollToTop()">↑</button>
   <a href="#">ページ最上部へ</a><br>
   <a href="index.html">もどる</a><br><br>
   </div>
+  <script>
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }
+  </script>
 </body>
 </html>

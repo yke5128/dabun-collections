@@ -26,6 +26,11 @@
       color: #333;
       ruby-position: over;
     }
+    @media (max-width: 600px) {
+      body {
+        font-size: 18px;
+      }
+    }
     .left {
       text-align: left;
       max-width: 800px;
@@ -33,7 +38,40 @@
     .center {
       text-align: center;
     }
-    
+  .fixed-btn {
+      position: fixed;
+      bottom: 20px;
+      width: 60px;
+      height: 60px;
+      background-color: rgba(0, 0, 0, 0.4);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      font-size: 24px;
+      cursor: pointer;
+      z-index: 999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: blur(5px);
+      transition: background-color 0.3s;
+    }
+
+    .fixed-btn:hover {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .scroll-top-btn {
+      right: 20px;
+    }
+
+    .back-btn {
+      right: 90px;
+    }
+
+    .scroll-top-btn:hover {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
   </style>
 </head>
 <body>
@@ -44,7 +82,9 @@
   <div id="content"></div>
   <br>
   <div class="center">
-  <a href="kanjironko.html">もどる</a><br><br>
+  <button class="fixed-btn back-btn" onclick="history.back()">←</button>
+  <button class="fixed-btn scroll-top-btn" onclick="scrollToTop()">↑</button>
+  <a href="kanjironko.html">漢字の巣窟にもどる</a><br><br>
   </div>
   </div>
 

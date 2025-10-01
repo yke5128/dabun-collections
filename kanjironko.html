@@ -31,10 +31,11 @@
 <body>
   <div class="center">
   <h1>漢字の巣窟</h1>
-  漢字マニアの見つめる深淵がここにある。
+  漢字マニアの見つめる深淵がここにある。<br>
+  いまだ少ないのでゆくゆく拡充したい。
   <div class="left">
   <ul>
-    <li><a href="viewer2.html?file=joyo.txt">常用漢字に就いて</a></li>
+    <li><a href="viewer2.html?file=joyo.txt">常用漢字に就いて(<span class="file-date" data-file="joyo.txt"></span>)</a></li>
     <li><a href="viewer_nandoku.html?file=nandoku.txt">難読漢字コレクション</a></li>
 
   </ul>
@@ -42,6 +43,16 @@
   <br>
   <a href="index.html">もどる</a><br><br>
   </div>
-
+<script>
+  document.querySelectorAll('.file-date').forEach(function(span) {
+  const fileName = span.getAttribute('data-file');
+  fetch('TEXT/' + fileName)
+    .then(response => response.text())
+    .then(text => {
+      const lines = text.split(/\r?\n/);
+      span.innerHTML = lines[1] || '';
+    });
+});
+</script>
 </body>
 </html>
