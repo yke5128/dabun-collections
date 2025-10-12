@@ -85,13 +85,22 @@
   <div id="content"></div>
   <br>
   <div class="center">
-  <button class="fixed-btn back-btn" onclick="history.back()">←</button>
+  <button class="fixed-btn back-btn" onclick="goBack()">←</button>
   <button class="fixed-btn scroll-top-btn" onclick="scrollToTop()">↑</button>
   <a href="sentences.html">駄文置き場にもどる</a><br><br>
   </div>
   </div>
 
   <script>
+
+    function goBack() {
+      if (history.length <= 1 || document.referrer === "") {
+        window.location.href = 'sentences.html';
+      } else {
+        history.back();
+      }
+    }
+
     function scrollToTop() {
       window.scrollTo({
         top: 0,
