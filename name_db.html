@@ -17,35 +17,18 @@
       font-family: "Kaisei Opti", serif;
       line-height: 2;
     }
-    @media (max-width: 600px) {
-      body {
-        font-size: 18px;
-      }
-      #resultList {
-        width: 90%;
-      }
-      #searchBox {
-        width: 240px;
-      }
-      #searchBtn {
-        width: 90px;
-      }
-      #searchBox,#searchBtn {
-        padding: 0.7rem;
-      }
-    }
+    
     #searchBox,#searchBtn {
         padding: 1.5rem;
         margin-top: 1rem;
+        font-size: 1.2rem;
         font-family: "Kaisei Opti", serif;
     }
     #searchBox {
         width: 350px;
-        font-size: 1.2rem;
     }
     #searchBtn {
         width: 130px;
-        font-size: 1.2rem;
         cursor: pointer;
     }
     #resultList {
@@ -59,9 +42,6 @@
     .center {
       text-align: center;
       max-width: 730px;
-    }
-    .left {
-      text-align: left;
     }
     .search-container {
       display: flex;
@@ -107,14 +87,33 @@
     .scroll-top-btn:hover {
       background-color: rgba(0, 0, 0, 0.6);
     }
+
+    @media (max-width: 600px) {
+      body {
+        font-size: 18px;
+      }
+      #resultList {
+        width: 90%;
+      }
+      #searchBox {
+        width: 240px;
+      }
+      #searchBtn {
+        width: 90px;
+      }
+      #searchBox,#searchBtn {
+        padding: 0.7rem;
+        font-size: 1rem;
+      }
+    }
     </style>
 </head>
 <body>
     <div class="search-container">
   <h1>次世代人名データベース</h1>
-  <p>yke創作の人名大事典。収録されているすべての名前は<b>人名に使える文字のみ</b>を使用。</p>
+  <div class="center"><p>yke創作の人名大事典。<br>収録されているすべての名前は<b>人名に使える文字のみ</b>を使用。</p></div>
   <p><div id="count">　</div></p>
-  <div class="search-box"><input type="text" id="searchBox" placeholder="名前や読みを入力（部分一致）"><button id="searchBtn">検索</button></div>
+  <div class="search-box"><input type="text" id="searchBox" placeholder="漢字や読みを入力（部分一致）"><button id="searchBtn">検索</button></div>
   <div id="resultCount"></div>
   <div id="resultList"></div>
   <script src="database.js"></script>
