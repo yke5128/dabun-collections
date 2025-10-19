@@ -3,35 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>駄文置き場</title>
   <link href="https://fonts.googleapis.com/css2?family=Kaisei+Opti&family=Shippori+Mincho&display=swap" rel="stylesheet">
-
-  <style>
-    body {
-      display: flex;
-      margin: 0;
-      justify-content: center;
-      align-items: center;
-      background-color: rgb(255, 238, 251);
-      font-size: 22px;
-      font-family: "Kaisei Opti", serif;
-      line-height: 2;
-    }
-    @media (max-width: 600px) {
-      body {
-        font-size: 18px;
-      }
-    }
-    .center {
-      text-align: center;
-      max-width: 730px;
-    }
-    .left {
-      text-align: left;
-    }
-
-    /* .title-box span {
+  <link rel="stylesheet" href="layout.css">
+  <!-- <style>
+    .title-box span {
   display: inline-block;
   width: 80px;   
   height: 80px;  
@@ -44,8 +20,9 @@
   line-height: 80px;
   font-weight: bold;
   transition: background 0.2s;
-} */
-  </style>
+}
+  </style> -->
+  <script src="file_date.js" defer></script>
 </head>
 
 <body>
@@ -95,17 +72,5 @@
   </div>
     <a href="index.html" style="display: inline-block; margin-top: 2rem; margin-bottom: 4rem;">もどる</a>
   </div>
-
-<script>
-  document.querySelectorAll('.file-date').forEach(function(span) {
-  const fileName = span.getAttribute('data-file');
-  fetch('TEXT/' + fileName)
-    .then(response => response.text())
-    .then(text => {
-      const lines = text.split(/\r?\n/);
-      span.innerHTML = lines[1] || '';
-    });
-});
-</script>
 </body>
 </html>

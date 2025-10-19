@@ -1,0 +1,33 @@
+html {
+      scroll-behavior: smooth;
+    }
+    body {
+      display: flex;
+      margin: 0;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(255, 244, 251);
+      font-size: 22px;
+      font-family: "Kaisei Opti", serif;
+      line-height: 2;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 18px;
+      }
+    }
+    .center {
+      text-align: center;
+      max-width: 730px;
+    }
+    .left {
+      text-align: left;
+    }
+    .headline {
+      font-size: 28px;
+    }
+    ruby rt {
+      font-size: 0.6em;
+      color: #333;
+      ruby-position: over;
+    }

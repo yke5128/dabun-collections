@@ -4,20 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>次世代人名データベース</title>
+  <link rel="stylesheet" href="arrow_button.css">
+  <link rel="stylesheet" href="layout.css">
   <link href="https://fonts.googleapis.com/css2?family=Kaisei+Opti&family=Shippori+Mincho&display=swap" rel="stylesheet">
 
   <style>
-    body {
-      display: flex;
-      margin: 0;
-      justify-content: center;
-      align-items: center;
-      background-color: rgb(255, 238, 251);
-      font-size: 22px;
-      font-family: "Kaisei Opti", serif;
-      line-height: 2;
-    }
-    
     #searchBox,#searchBtn {
         padding: 1.5rem;
         margin-top: 1rem;
@@ -39,10 +30,6 @@
         margin-top: 2rem;
         margin-bottom: 4rem;
     }
-    .center {
-      text-align: center;
-      max-width: 730px;
-    }
     .search-container {
       display: flex;
       flex-direction: column;
@@ -52,46 +39,7 @@
       display: flex;
       flex-direction: row;
     }
-
-    .fixed-btn {
-      position: fixed;
-      bottom: 20px;
-      width: 60px;
-      height: 60px;
-      background-color: rgba(0, 0, 0, 0.4);
-      color: white;
-      border: none;
-      border-radius: 50%;
-      font-size: 24px;
-      cursor: pointer;
-      z-index: 999;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      backdrop-filter: blur(5px);
-      transition: background-color 0.3s;
-    }
-
-    .fixed-btn:hover {
-      background-color: rgba(0, 0, 0, 0.6);
-    }
-
-    .scroll-top-btn {
-      right: 20px;
-    }
-
-    .back-btn {
-      right: 90px;
-    }
-
-    .scroll-top-btn:hover {
-      background-color: rgba(0, 0, 0, 0.6);
-    }
-
     @media (max-width: 600px) {
-      body {
-        font-size: 18px;
-      }
       #resultList {
         width: 90%;
       }

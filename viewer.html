@@ -3,18 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>駄文</title>
+  <title>yke's Paradise</title>
   <link href="https://fonts.googleapis.com/css2?family=Kaisei+Opti&family=Shippori+Mincho&display=swap" rel="stylesheet">
-
+  <link rel="stylesheet" href="arrow_button.css">
+  <link rel="stylesheet" href="layout.css">
   <style>
     body {
-      display: flex;
-      margin: 0;
-      justify-content: center;
-      background-color: rgb(255, 238, 251);
-      font-size: 22px;
-      font-family: "Kaisei Opti", serif;
+      line-height: normal;
+      align-items: normal;
       padding: 20px;
     }
     #content {
@@ -22,59 +18,9 @@
       margin-top: 20px;
       line-height: 2.4;
     }
-    ruby rt {
-      font-size: 0.6em;
-      color: #333;
-      ruby-position: over;
-    }
-    @media (max-width: 600px) {
-      body {
-        font-size: 18px;
-      }
-    }
     .left {
-      text-align: left;
       max-width: 800px;
     }
-    .center {
-      text-align: center;
-    }
-
-    .fixed-btn {
-      position: fixed;
-      bottom: 20px;
-      width: 60px;
-      height: 60px;
-      background-color: rgba(0, 0, 0, 0.4);
-      color: white;
-      border: none;
-      border-radius: 50%;
-      font-size: 24px;
-      cursor: pointer;
-      z-index: 999;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      backdrop-filter: blur(5px);
-      transition: background-color 0.3s;
-    }
-
-    .fixed-btn:hover {
-      background-color: rgba(0, 0, 0, 0.6);
-    }
-
-    .scroll-top-btn {
-      right: 20px;
-    }
-
-    .back-btn {
-      right: 90px;
-    }
-
-    .scroll-top-btn:hover {
-      background-color: rgba(0, 0, 0, 0.6);
-    }
-    
   </style>
 </head>
 <body>
@@ -90,7 +36,6 @@
   <a href="sentences.html" style="display: inline-block; margin-top: 2rem; margin-bottom: 4rem;">駄文置き場にもどる</a>
   </div>
   </div>
-
   <script>
 
     function goBack() {
@@ -114,6 +59,8 @@
     }
 
     const file = getQueryParam('file');
+    const back = getQueryParam('back');
+
     if (file) {
       fetch('./TEXT/'+file)
         .then(response => {
@@ -137,6 +84,25 @@
         });
     } else {
       document.getElementById('content').textContent = 'ファイル指定がありません。';
+    }
+    const backLink = document.querySelector('.center a');
+
+    if (back === 'kanjironko') {
+      backLink.href = 'kanjironko.html';
+      backLink.textContent = '漢字の巣窟にもどる';
+    } else {
+      backLink.href = 'sentences.html';
+      backLink.textContent = '駄文置き場にもどる';
+    }
+
+    if (file === 'nandoku.txt') {
+      const style = document.createElement('style');
+      style.textContent = `
+        #content {
+        line-height: normal;
+      }
+      `;
+      document.head.appendChild(style);
     }
   </script>
 </body>
