@@ -6,6 +6,7 @@
   <title>次世代人名データベース</title>
   <link rel="stylesheet" href="arrow_button.css">
   <link rel="stylesheet" href="layout.css">
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Kaisei+Opti&family=Shippori+Mincho&display=swap" rel="stylesheet">
 
   <style>
@@ -13,7 +14,7 @@
         padding: 1.5rem;
         margin-top: 1rem;
         font-size: 1.2rem;
-        font-family: "Kaisei Opti", serif;
+        font-family: "Zen Kaku Gothic New", sans-serif;
     }
     #searchBox {
         width: 350px;
@@ -39,6 +40,9 @@
       display: flex;
       flex-direction: row;
     }
+    .db-font{
+      font-family: "Zen Kaku Gothic New", sans-serif;
+    }
     @media (max-width: 600px) {
       #resultList {
         width: 90%;
@@ -56,17 +60,37 @@
     }
     </style>
     <script src="database.js" defer></script>
+    <script src="goback_scroll.js" defer></script>
 </head>
 <body>
     <div class="search-container">
   <h1>次世代人名データベース</h1>
   <div class="center"><p>yke創作の人名大事典。<br>収録されているすべての名前は<b>人名に使える文字のみ</b>を使用。</p></div>
   <p><div id="count">　</div></p>
+  <div id="output">　</div>
   <div class="search-box"><input type="text" id="searchBox" placeholder="漢字や読みを入力（部分一致）"><button id="searchBtn">検索</button></div>
+  <div  style="padding-top: 30px;">
+  <label for="genderFilter">性別で絞り込み：</label>
+  <select id="genderFilter">
+    <option value="all">すべて</option>
+    <option value="m">男の子のみ</option>
+    <option value="f">女の子のみ</option>
+    <option value="u">共通のみ</option>
+  </select>
+</div>
+  <div>
+  <label for="sortSelect">並び替え：</label>
+  <select id="sortSelect" class="sort-container">
+    <option value="default">並び替えなし</option>
+    <option value="asc">画数昇順</option>
+    <option value="desc">画数降順</option>
+  </select>
+</div>
   <div id="resultCount"></div>
-  <div id="resultList"></div>
+  <div id="resultList" class="db-font">　　　　　　　　Now Loading...</div>
   <button class="fixed-btn back-btn" onclick="goBack()">←</button>
   <button class="fixed-btn scroll-top-btn" onclick="scrollToTop()">↑</button>
+  <button class="fixed-btn scroll-bottom-btn" onclick="scrollToBottom()">↓</button>
   <a id="return-link" href="index.html">もどる</a></div>
 </body>
 </html>

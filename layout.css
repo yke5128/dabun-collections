@@ -8,8 +8,11 @@ html {
       align-items: center;
       background-color: rgb(255, 244, 251);
       font-size: 22px;
-      font-family: "Kaisei Opti", serif;
+      font-family: "Zen Kaku Gothic New", sans-serif;
       line-height: 2;
+    }
+    h1 {
+      font-family: "Kaisei Opti", serif;
     }
     @media (max-width: 600px) {
       body {
@@ -25,6 +28,7 @@ html {
     }
     .headline {
       font-size: 28px;
+      font-family: "Kaisei Opti", serif;
     }
     ruby rt {
       font-size: 0.6em;

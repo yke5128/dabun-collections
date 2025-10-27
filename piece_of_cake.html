@@ -4,9 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ピース・オブ・警句集</title>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Kaisei+Opti&family=Shippori+Mincho&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="arrow_button.css">
   <link rel="stylesheet" href="layout.css">
+  <script src="goback_scroll.js" defer></script>
 </head>
 
 <body>
@@ -290,16 +292,9 @@
   <br>
   <button class="fixed-btn back-btn" onclick="history.back()">←</button>
   <button class="fixed-btn scroll-top-btn" onclick="scrollToTop()">↑</button>
+  <button class="fixed-btn scroll-bottom-btn" onclick="scrollToBottom()">↓</button>
   <a href="#">ページ最上部へ</a><br>
   <a href="index.html" style="display: inline-block; margin-top: 2rem; margin-bottom: 4rem;">もどる</a>
   </div>
-  <script>
-    function scrollToTop() {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
-    }
-  </script>
 </body>
 </html>

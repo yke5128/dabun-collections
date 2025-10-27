@@ -17,11 +17,12 @@
       transition: background-color 0.3s;
     }
 
-    .fixed-btn:hover {
+    .fixed-btn:hover,.scroll-top-btn:hover {
       background-color: rgba(0, 0, 0, 0.6);
     }
 
     .scroll-top-btn {
+      bottom: 90px;
       right: 20px;
     }
 
@@ -29,6 +30,6 @@
       right: 90px;
     }
 
-    .scroll-top-btn:hover {
-      background-color: rgba(0, 0, 0, 0.6);
+    .scroll-bottom-btn {
+      right: 20px;
     }
