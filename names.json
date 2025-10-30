@@ -87,7 +87,7 @@
 {"name": "舵乃", "reading": "かじの", "gender": "f", "stroke": "13"},
 {"name": "課整", "reading": "かせい", "gender": "m", "stroke": "31"},
 {"name": "俄醒", "reading": "がせい", "gender": "m", "stroke": "25"},
-{"name": "核像画", "reading": "かぞえ", "gender": "m", "stroke": "32"}
+{"name": "核像画", "reading": "かぞえ", "gender": "m", "stroke": "32"},
 {"name": "捷徽", "reading": "かつき", "gender": "m", "stroke": "28"},
 {"name": "轄打", "reading": "かった", "gender": "m", "stroke": "22"},
 {"name": "糧己", "reading": "かてき", "gender": "m", "stroke": "21"},
@@ -283,7 +283,7 @@
 {"name": "耐而", "reading": "たし", "gender": "m", "stroke": "15"},
 {"name": "毘", "reading": "たすく", "gender": "m", "stroke": "9"},
 {"name": "惰捨", "reading": "だすつ", "gender": "m", "stroke": "23"},
-{"name": "雫々", "reading": "だだ", "gender": "u", "stroke": "14"}
+{"name": "雫々", "reading": "だだ", "gender": "u", "stroke": "14"},
 {"name": "匡諮", "reading": "ただし", "gender": "m", "stroke": "22"},
 {"name": "栽", "reading": "たね", "gender": "u", "stroke": "10"},
 {"name": "汰寛", "reading": "たゆた", "gender": "m", "stroke": "20"},
