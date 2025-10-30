@@ -1,6 +1,6 @@
 function goBack() {
       if (history.length <= 1 || document.referrer === "") {
-        window.location.href = 'sentences.html';
+        window.location.href = 'index.html';
       } else {
         history.back();
       }
