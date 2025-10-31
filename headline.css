@@ -1,0 +1,38 @@
+    .title-box span {
+  display: inline-block;
+  width: 70px;   
+  height: 70px;
+  margin: 0.05em; 
+  border: 2px solid #000;
+  text-align: center;
+  line-height: 70px;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+    .initial-title-box {
+  display: inline-block;
+  width: 70px;   
+  height: 70px;  
+  margin: 0.05em;
+  color: #fff;
+  border: 2px solid #000;
+  background: #000;
+  text-align: center;
+  line-height: 70px;
+  font-weight: bold;
+  transition: background 0.2s;
+  }
+    .initial-title-box,.title-box {
+  display: inline-block;
+  }
+  .initial-title-box.cake {
+  background: rgb(255, 181, 222);
+  border: 2px solid rgb(255, 181, 222);
+  }
+  .flex {
+      display: inline-flexbox;
+      padding-top: 30px;
+      line-height: 30px;
+      font-size: 38px;
+      font-family:"Kaisei Opti", serif;
+    }

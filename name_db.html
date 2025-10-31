@@ -6,6 +6,7 @@
   <title>次世代人名データベース</title>
   <link rel="stylesheet" href="arrow_button.css">
   <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="headline.css">
   <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Kaisei+Opti&family=Shippori+Mincho&display=swap" rel="stylesheet">
 
@@ -40,9 +41,6 @@
       display: flex;
       flex-direction: row;
     }
-    .db-font{
-      font-family: "Zen Kaku Gothic New", sans-serif;
-    }
     @media (max-width: 600px) {
       #resultList {
         width: 90%;
@@ -58,13 +56,15 @@
         font-size: 1rem;
       }
     }
+
     </style>
     <script src="database.js" defer></script>
     <script src="goback_scroll.js" defer></script>
 </head>
 <body>
     <div class="search-container">
-  <h1>次世代人名データベース</h1>
+  <div class="flex"><div class="initial-title-box">次</div><div class="title-box"><span>世</span><span>代</span><span>人</span><span>名</span><span>　</span></div><br>
+  <div class="title-box"><span>デ</span><span>ー</span><span>タ</span><span>ベ</span><span>ー</span><span>ス</span></div></div>
   <div class="center"><p>yke創作の人名大事典。<br>収録されているすべての名前は<b>人名に使える文字のみ</b>を使用。</p></div>
   <p><div id="count">　</div></p>
   <div id="output">　</div>
@@ -87,7 +87,7 @@
   </select>
 </div>
   <div id="resultCount"></div>
-  <div id="resultList" class="db-font">　　　　　　　　Now Loading...</div>
+  <div id="resultList">　　　　　　　　Now Loading...</div>
   <button class="fixed-btn back-btn" onclick="goBack()">←</button>
   <button class="fixed-btn scroll-top-btn" onclick="scrollToTop()">↑</button>
   <button class="fixed-btn scroll-bottom-btn" onclick="scrollToBottom()">↓</button>
