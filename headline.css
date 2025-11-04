@@ -1,4 +1,5 @@
-    .title-box span {
+@media (min-width: 470px) {
+.title-box span {
   display: inline-block;
   width: 70px;   
   height: 70px;
@@ -36,3 +37,4 @@
       font-size: 38px;
       font-family:"Kaisei Opti", serif;
     }
+  }
