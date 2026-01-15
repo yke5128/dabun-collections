@@ -194,9 +194,9 @@ fetch('names.json')
       }
     });
 
-  // 都、練、虜がカウントできないので+3
+  // 都、練、虜、侮がカウントできないので+4
     const output = document.getElementById('output');
-    output.textContent = `人名に使える漢字のうち、${globalKanjiSet.size + 3}字／2999字が使われています`;
+    output.textContent = `人名に使える漢字のうち、${globalKanjiSet.size + 4}字／2999字が使われています`;
   })
   .catch(err => {
     document.getElementById('output').textContent = '読み込みエラー: ' + err.message;
