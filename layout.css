@@ -7,16 +7,17 @@ html {
       justify-content: center;
       align-items: center;
       background-color: rgb(251, 248, 250);
-      font-size: 20px;
+      font-size: 19px;
       font-family: "Zen Kaku Gothic New", sans-serif;
-      line-height: 1.8;
+      line-height: 1.7;
     }
     h1 {
       font-family: "Kaisei Opti", serif;
     }
     @media (max-width: 600px) {
       body {
-        font-size: 17px;
+        font-size: 16px;
+        line-height: 1.6;
       }
     }
     .center {
